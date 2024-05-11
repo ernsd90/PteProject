@@ -37,7 +37,7 @@ const User = sequelize.define('pte_users', {
 
 User.beforeCreate(async (user) => {
     const salt = await bcrypt.genSalt(10);
-    user.password = await bcrypt.hash(user.password, salt);
+    user.user_password = await bcrypt.hash(user.user_password, salt);
 });
 
 

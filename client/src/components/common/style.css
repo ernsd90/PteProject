@@ -1,0 +1,16 @@
+@import url('../../assets/css/vendor/bootstrap.min.css');
+@import url('../../assets/css/plugins/sal.css');
+@import "~slick-carousel/slick/slick.css";
+@import "~slick-carousel/slick/slick-theme.css";
+@import url('../../assets/css/plugins/feather.css');
+@import url('../../assets/css/plugins/fontawesome.min.css');
+@import url('../../assets/css/plugins/euclid-circulara.css');
+@import url('../../assets/css/plugins/swiper.css');
+@import url('../../assets/css/plugins/magnify.css');
+@import url('../../assets/css/plugins/odometer.css');
+@import url('../../assets/css/plugins/animation.css');
+@import url('../../assets/css/plugins/bootstrap-select.min.css');
+/*@import url('../../assets/css/plugins/jquery-ui.css');*/
+@import url('../../assets/css/plugins/magnigy-popup.min.css');
+@import url('../../assets/css/plugins/plyr.css');
+@import url('../../assets/css/style.css');
