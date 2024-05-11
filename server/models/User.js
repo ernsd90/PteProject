@@ -3,22 +3,30 @@ const sequelize = require('../config/database'); // Adjust the path as necessary
 const bcrypt = require('bcryptjs');
 
 
-const User = sequelize.define('hr_user', {
+const User = sequelize.define('pte_users', {
     id: {
         type: DataTypes.INTEGER,
         primaryKey: true,
         autoIncrement: true
     },
-    name: {
+    first_name: {
         type: DataTypes.STRING,
         allowNull: false
     },
-    email: {
+    last_name: {
+        type: DataTypes.STRING,
+        allowNull: false
+    },
+    username: {
+        type: DataTypes.STRING,
+        allowNull: false
+    },
+    user_email: {
         type: DataTypes.STRING,
         allowNull: false,
         unique: true
     },
-    password: {
+    user_password: {
         type: DataTypes.STRING,
         allowNull: false
     }

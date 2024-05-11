@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { DictaphoneWidgetA, DictaphoneWidgetB } from './Dictaphone'
 import SpeechRecognition from './SpeechRecognition'
 
-export default () => {
+const Dictaphone = () => {
   const [showFirstWidget, setShowFirstWidget] = useState(true)
   const toggleShowFirstWidget = () => setShowFirstWidget(!showFirstWidget)
 
@@ -29,3 +29,6 @@ export default () => {
     </div>
   )
 }
+
+
+export default Dictaphone;

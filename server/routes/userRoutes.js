@@ -12,6 +12,6 @@ router.post('/register', userController.registerUser);
 router.post('/login', userController.loginUser);
 
 // Use this in your routes file
-router.get('/protected-route', authMiddleware.protect, someController.someProtectedMethod);
+//router.get('/protected-route', authMiddleware.protect, someController.someProtectedMethod);
 
 module.exports = router;
