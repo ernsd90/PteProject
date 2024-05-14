@@ -27,7 +27,7 @@ const LandingPage = () => {
                             </p>
                             <div className="rbt-single-course-meta text-center mt--20">
                             <div className="enroll-btn mt--15">
-                                <a className="rbt-btn btn-gradient hover-icon-reverse" href="#">
+                                <a className="rbt-btn btn-gradient hover-icon-reverse" href="/">
                                 <span className="icon-reverse-wrapper">
                                     <span className="btn-text">Enrol Course Now</span>
                                     <span className="btn-icon">
@@ -94,7 +94,7 @@ const LandingPage = () => {
                                 <img
                                 className="w-100 radius-10"
                                 src="assets/images/course/course-single-01.jpg"
-                                alt="Card image"
+                                alt="Card"
                                 />
                             </div>
                             </div>
@@ -164,7 +164,7 @@ const LandingPage = () => {
                                 {/* End Feture Box  */}
                             </div>
                             <div className="read-more-btn mt--40">
-                                <a className="rbt-moderbt-btn" href="#">
+                                <a className="rbt-moderbt-btn" href="/">
                                 <span className="moderbt-btn-text">Learn More About Us</span>
                                 <i className="feather-arrow-right" />
                                 </a>
@@ -188,7 +188,7 @@ const LandingPage = () => {
                                 absolute <br /> beginners to getting hired.
                             </h2>
                             <div className="rbt-button-group mt--30">
-                                <a className="rbt-btn btn-gradient hover-icon-reverse" href="#">
+                                <a className="rbt-btn btn-gradient hover-icon-reverse" href="/">
                                 <span className="icon-reverse-wrapper">
                                     <span className="btn-text">Explore Course</span>
                                     <span className="btn-icon">
@@ -201,7 +201,7 @@ const LandingPage = () => {
                                 </a>
                                 <a
                                 className="rbt-btn hover-icon-reverse btn-border color-white-off"
-                                href="#"
+                                href="/"
                                 >
                                 <span className="icon-reverse-wrapper">
                                     <span className="btn-text">Hired List</span>
@@ -223,7 +223,7 @@ const LandingPage = () => {
                                     <div className="thumbnail">
                                     <img
                                         src="assets/images/course/single-course-02.jpg"
-                                        alt="Image"
+                                        alt="PTE"
                                     />
                                     </div>
                                     <div className="content">
@@ -242,7 +242,7 @@ const LandingPage = () => {
                                         <div className="icon">
                                             <img
                                             src="assets/images/icons/card-icon-1.png"
-                                            alt="Image Icon"
+                                           alt="PTE Icon"
                                             />
                                         </div>
                                         <div className="feature-content">
@@ -255,7 +255,7 @@ const LandingPage = () => {
                                         <div className="icon">
                                             <img
                                             src="assets/images/icons/card-icon-4.png"
-                                            alt="Image Icon"
+                                           alt="PTE Icon"
                                             />
                                         </div>
                                         <div className="feature-content">
@@ -268,7 +268,7 @@ const LandingPage = () => {
                                         <div className="icon">
                                             <img
                                             src="assets/images/icons/card-icon-2.png"
-                                            alt="Image Icon"
+                                           alt="PTE Icon"
                                             />
                                         </div>
                                         <div className="feature-content">
@@ -290,7 +290,7 @@ const LandingPage = () => {
                                     <div className="thumbnail">
                                     <img
                                         src="assets/images/course/single-course-06.jpg"
-                                        alt="Image"
+                                        alt="PTE"
                                     />
                                     </div>
                                     <div className="content">
@@ -304,7 +304,7 @@ const LandingPage = () => {
                                         <div className="icon">
                                             <img
                                             src="assets/images/icons/card-icon-11.png"
-                                            alt="Image Icon"
+                                           alt="PTE Icon"
                                             />
                                         </div>
                                         <div className="feature-content">
@@ -317,7 +317,7 @@ const LandingPage = () => {
                                         <div className="icon">
                                             <img
                                             src="assets/images/icons/card-icon-12.png"
-                                            alt="Image Icon"
+                                           alt="PTE Icon"
                                             />
                                         </div>
                                         <div className="feature-content">
@@ -343,7 +343,7 @@ const LandingPage = () => {
                                             <div className="thumbnail mt--0">
                                             <img
                                                 src="assets/images/course/single-course-07.jpg"
-                                                alt="Image"
+                                                alt="PTE"
                                             />
                                             </div>
                                         </div>
@@ -351,7 +351,7 @@ const LandingPage = () => {
                                             <div className="thumbnail mt--0">
                                             <img
                                                 src="assets/images/course/single-course-08.jpg"
-                                                alt="Image"
+                                                alt="PTE"
                                             />
                                             </div>
                                         </div>
@@ -359,7 +359,7 @@ const LandingPage = () => {
                                             <div className="thumbnail mt--0">
                                             <img
                                                 src="assets/images/course/single-course-09.jpg"
-                                                alt="Image"
+                                                alt="PTE"
                                             />
                                             </div>
                                         </div>
@@ -432,7 +432,7 @@ const LandingPage = () => {
                         </div>
                         <div className="col-lg-6 col-md-6">
                         <div className="expend-button text-start text-md-end">
-                            <a className="rbt-btn-link w-700" href="#">
+                            <a className="rbt-btn-link w-700" href="/">
                             Expand all sections
                             <i className="feather-arrow-right" />
                             </a>
@@ -446,7 +446,7 @@ const LandingPage = () => {
                             <img
                                 className="w-100 radius-10"
                                 src="assets/images/course/course-elegant-01.jpg"
-                                alt="Card image"
+                                alt="Card PTE"
                             />
                             <a
                                 className="rbt-btn rounded-player-2 popup-video position-to-top with-animation btn-white-color"
@@ -458,7 +458,7 @@ const LandingPage = () => {
                             <div className="enroll-btn mt--15">
                             <a
                                 className="rbt-btn btn-gradient hover-icon-reverse w-100 radius-round"
-                                href="#"
+                                href="/"
                             >
                                 <span className="icon-reverse-wrapper">
                                 <span className="btn-text">Continue Course</span>
@@ -499,7 +499,7 @@ const LandingPage = () => {
                                     <div className="accordion-body card-body">
                                     <ul className="rbt-course-main-content liststyle">
                                         <li>
-                                        <a href="#">
+                                        <a href="/">
                                             <div className="course-content-left">
                                             <i className="feather-play-circle" />{" "}
                                             <span className="text">Course Intro</span>
@@ -515,7 +515,7 @@ const LandingPage = () => {
                                         </a>
                                         </li>
                                         <li>
-                                        <a href="#">
+                                        <a href="/">
                                             <div className="course-content-left">
                                             <i className="feather-play-circle" />{" "}
                                             <span className="text">Watch Before Start</span>
@@ -531,7 +531,7 @@ const LandingPage = () => {
                                         </a>
                                         </li>
                                         <li>
-                                        <a href="#">
+                                        <a href="/">
                                             <div className="course-content-left">
                                             <i className="feather-file-text" />{" "}
                                             <span className="text">
@@ -574,7 +574,7 @@ const LandingPage = () => {
                                     <div className="accordion-body card-body">
                                     <ul className="rbt-course-main-content liststyle">
                                         <li>
-                                        <a href="#">
+                                        <a href="/">
                                             <div className="course-content-left">
                                             <i className="feather-play-circle" />{" "}
                                             <span className="text">Course Intro</span>
@@ -585,7 +585,7 @@ const LandingPage = () => {
                                         </a>
                                         </li>
                                         <li>
-                                        <a href="#">
+                                        <a href="/">
                                             <div className="course-content-left">
                                             <i className="feather-file-text" />{" "}
                                             <span className="text">
@@ -598,7 +598,7 @@ const LandingPage = () => {
                                         </a>
                                         </li>
                                         <li>
-                                        <a href="#">
+                                        <a href="/">
                                             <div className="course-content-left">
                                             <i className="feather-play-circle" />{" "}
                                             <span className="text">
@@ -611,7 +611,7 @@ const LandingPage = () => {
                                         </a>
                                         </li>
                                         <li>
-                                        <a href="#">
+                                        <a href="/">
                                             <div className="course-content-left">
                                             <i className="feather-file-text" />{" "}
                                             <span className="text">
@@ -624,7 +624,7 @@ const LandingPage = () => {
                                         </a>
                                         </li>
                                         <li>
-                                        <a href="#">
+                                        <a href="/">
                                             <div className="course-content-left">
                                             <i className="feather-play-circle" />{" "}
                                             <span className="text">
@@ -637,7 +637,7 @@ const LandingPage = () => {
                                         </a>
                                         </li>
                                         <li>
-                                        <a href="#">
+                                        <a href="/">
                                             <div className="course-content-left">
                                             <i className="feather-file-text" />{" "}
                                             <span className="text">
@@ -675,7 +675,7 @@ const LandingPage = () => {
                                     <div className="accordion-body card-body">
                                     <ul className="rbt-course-main-content liststyle">
                                         <li>
-                                        <a href="#">
+                                        <a href="/">
                                             <div className="course-content-left">
                                             <i className="feather-play-circle" />{" "}
                                             <span className="text">Course Intro</span>
@@ -686,7 +686,7 @@ const LandingPage = () => {
                                         </a>
                                         </li>
                                         <li>
-                                        <a href="#">
+                                        <a href="/">
                                             <div className="course-content-left">
                                             <i className="feather-file-text" />{" "}
                                             <span className="text">
@@ -699,7 +699,7 @@ const LandingPage = () => {
                                         </a>
                                         </li>
                                         <li>
-                                        <a href="#">
+                                        <a href="/">
                                             <div className="course-content-left">
                                             <i className="feather-play-circle" />{" "}
                                             <span className="text">
@@ -712,7 +712,7 @@ const LandingPage = () => {
                                         </a>
                                         </li>
                                         <li>
-                                        <a href="#">
+                                        <a href="/">
                                             <div className="course-content-left">
                                             <i className="feather-file-text" />{" "}
                                             <span className="text">
@@ -725,7 +725,7 @@ const LandingPage = () => {
                                         </a>
                                         </li>
                                         <li>
-                                        <a href="#">
+                                        <a href="/">
                                             <div className="course-content-left">
                                             <i className="feather-play-circle" />{" "}
                                             <span className="text">
@@ -738,7 +738,7 @@ const LandingPage = () => {
                                         </a>
                                         </li>
                                         <li>
-                                        <a href="#">
+                                        <a href="/">
                                             <div className="course-content-left">
                                             <i className="feather-file-text" />{" "}
                                             <span className="text">
@@ -776,7 +776,7 @@ const LandingPage = () => {
                                     <div className="accordion-body card-body">
                                     <ul className="rbt-course-main-content liststyle">
                                         <li>
-                                        <a href="#">
+                                        <a href="/">
                                             <div className="course-content-left">
                                             <i className="feather-play-circle" />{" "}
                                             <span className="text">Course Intro</span>
@@ -787,7 +787,7 @@ const LandingPage = () => {
                                         </a>
                                         </li>
                                         <li>
-                                        <a href="#">
+                                        <a href="/">
                                             <div className="course-content-left">
                                             <i className="feather-file-text" />{" "}
                                             <span className="text">
@@ -800,7 +800,7 @@ const LandingPage = () => {
                                         </a>
                                         </li>
                                         <li>
-                                        <a href="#">
+                                        <a href="/">
                                             <div className="course-content-left">
                                             <i className="feather-play-circle" />{" "}
                                             <span className="text">
@@ -813,7 +813,7 @@ const LandingPage = () => {
                                         </a>
                                         </li>
                                         <li>
-                                        <a href="#">
+                                        <a href="/">
                                             <div className="course-content-left">
                                             <i className="feather-file-text" />{" "}
                                             <span className="text">
@@ -826,7 +826,7 @@ const LandingPage = () => {
                                         </a>
                                         </li>
                                         <li>
-                                        <a href="#">
+                                        <a href="/">
                                             <div className="course-content-left">
                                             <i className="feather-play-circle" />{" "}
                                             <span className="text">
@@ -839,7 +839,7 @@ const LandingPage = () => {
                                         </a>
                                         </li>
                                         <li>
-                                        <a href="#">
+                                        <a href="/">
                                             <div className="course-content-left">
                                             <i className="feather-file-text" />{" "}
                                             <span className="text">
@@ -877,7 +877,7 @@ const LandingPage = () => {
                                     <div className="accordion-body card-body">
                                     <ul className="rbt-course-main-content liststyle">
                                         <li>
-                                        <a href="#">
+                                        <a href="/">
                                             <div className="course-content-left">
                                             <i className="feather-play-circle" />{" "}
                                             <span className="text">Course Intro</span>
@@ -888,7 +888,7 @@ const LandingPage = () => {
                                         </a>
                                         </li>
                                         <li>
-                                        <a href="#">
+                                        <a href="/">
                                             <div className="course-content-left">
                                             <i className="feather-file-text" />{" "}
                                             <span className="text">
@@ -901,7 +901,7 @@ const LandingPage = () => {
                                         </a>
                                         </li>
                                         <li>
-                                        <a href="#">
+                                        <a href="/">
                                             <div className="course-content-left">
                                             <i className="feather-play-circle" />{" "}
                                             <span className="text">
@@ -914,7 +914,7 @@ const LandingPage = () => {
                                         </a>
                                         </li>
                                         <li>
-                                        <a href="#">
+                                        <a href="/">
                                             <div className="course-content-left">
                                             <i className="feather-file-text" />{" "}
                                             <span className="text">
@@ -927,7 +927,7 @@ const LandingPage = () => {
                                         </a>
                                         </li>
                                         <li>
-                                        <a href="#">
+                                        <a href="/">
                                             <div className="course-content-left">
                                             <i className="feather-play-circle" />{" "}
                                             <span className="text">
@@ -940,7 +940,7 @@ const LandingPage = () => {
                                         </a>
                                         </li>
                                         <li>
-                                        <a href="#">
+                                        <a href="/">
                                             <div className="course-content-left">
                                             <i className="feather-file-text" />{" "}
                                             <span className="text">
@@ -978,7 +978,7 @@ const LandingPage = () => {
                                     <div className="accordion-body card-body">
                                     <ul className="rbt-course-main-content liststyle">
                                         <li>
-                                        <a href="#">
+                                        <a href="/">
                                             <div className="course-content-left">
                                             <i className="feather-play-circle" />{" "}
                                             <span className="text">Course Intro</span>
@@ -989,7 +989,7 @@ const LandingPage = () => {
                                         </a>
                                         </li>
                                         <li>
-                                        <a href="#">
+                                        <a href="/">
                                             <div className="course-content-left">
                                             <i className="feather-file-text" />{" "}
                                             <span className="text">
@@ -1002,7 +1002,7 @@ const LandingPage = () => {
                                         </a>
                                         </li>
                                         <li>
-                                        <a href="#">
+                                        <a href="/">
                                             <div className="course-content-left">
                                             <i className="feather-play-circle" />{" "}
                                             <span className="text">
@@ -1015,7 +1015,7 @@ const LandingPage = () => {
                                         </a>
                                         </li>
                                         <li>
-                                        <a href="#">
+                                        <a href="/">
                                             <div className="course-content-left">
                                             <i className="feather-file-text" />{" "}
                                             <span className="text">
@@ -1028,7 +1028,7 @@ const LandingPage = () => {
                                         </a>
                                         </li>
                                         <li>
-                                        <a href="#">
+                                        <a href="/">
                                             <div className="course-content-left">
                                             <i className="feather-play-circle" />{" "}
                                             <span className="text">
@@ -1041,7 +1041,7 @@ const LandingPage = () => {
                                         </a>
                                         </li>
                                         <li>
-                                        <a href="#">
+                                        <a href="/">
                                             <div className="course-content-left">
                                             <i className="feather-file-text" />{" "}
                                             <span className="text">
@@ -1079,7 +1079,7 @@ const LandingPage = () => {
                                     <div className="accordion-body card-body">
                                     <ul className="rbt-course-main-content liststyle">
                                         <li>
-                                        <a href="#">
+                                        <a href="/">
                                             <div className="course-content-left">
                                             <i className="feather-play-circle" />{" "}
                                             <span className="text">Course Intro</span>
@@ -1090,7 +1090,7 @@ const LandingPage = () => {
                                         </a>
                                         </li>
                                         <li>
-                                        <a href="#">
+                                        <a href="/">
                                             <div className="course-content-left">
                                             <i className="feather-file-text" />{" "}
                                             <span className="text">
@@ -1103,7 +1103,7 @@ const LandingPage = () => {
                                         </a>
                                         </li>
                                         <li>
-                                        <a href="#">
+                                        <a href="/">
                                             <div className="course-content-left">
                                             <i className="feather-play-circle" />{" "}
                                             <span className="text">
@@ -1116,7 +1116,7 @@ const LandingPage = () => {
                                         </a>
                                         </li>
                                         <li>
-                                        <a href="#">
+                                        <a href="/">
                                             <div className="course-content-left">
                                             <i className="feather-file-text" />{" "}
                                             <span className="text">
@@ -1129,7 +1129,7 @@ const LandingPage = () => {
                                         </a>
                                         </li>
                                         <li>
-                                        <a href="#">
+                                        <a href="/">
                                             <div className="course-content-left">
                                             <i className="feather-play-circle" />{" "}
                                             <span className="text">
@@ -1142,7 +1142,7 @@ const LandingPage = () => {
                                         </a>
                                         </li>
                                         <li>
-                                        <a href="#">
+                                        <a href="/">
                                             <div className="course-content-left">
                                             <i className="feather-file-text" />{" "}
                                             <span className="text">
@@ -1180,7 +1180,7 @@ const LandingPage = () => {
                                     <div className="accordion-body card-body">
                                     <ul className="rbt-course-main-content liststyle">
                                         <li>
-                                        <a href="#">
+                                        <a href="/">
                                             <div className="course-content-left">
                                             <i className="feather-play-circle" />{" "}
                                             <span className="text">Course Intro</span>
@@ -1191,7 +1191,7 @@ const LandingPage = () => {
                                         </a>
                                         </li>
                                         <li>
-                                        <a href="#">
+                                        <a href="/">
                                             <div className="course-content-left">
                                             <i className="feather-file-text" />{" "}
                                             <span className="text">
@@ -1204,7 +1204,7 @@ const LandingPage = () => {
                                         </a>
                                         </li>
                                         <li>
-                                        <a href="#">
+                                        <a href="/">
                                             <div className="course-content-left">
                                             <i className="feather-play-circle" />{" "}
                                             <span className="text">
@@ -1217,7 +1217,7 @@ const LandingPage = () => {
                                         </a>
                                         </li>
                                         <li>
-                                        <a href="#">
+                                        <a href="/">
                                             <div className="course-content-left">
                                             <i className="feather-file-text" />{" "}
                                             <span className="text">
@@ -1230,7 +1230,7 @@ const LandingPage = () => {
                                         </a>
                                         </li>
                                         <li>
-                                        <a href="#">
+                                        <a href="/">
                                             <div className="course-content-left">
                                             <i className="feather-play-circle" />{" "}
                                             <span className="text">
@@ -1243,7 +1243,7 @@ const LandingPage = () => {
                                         </a>
                                         </li>
                                         <li>
-                                        <a href="#">
+                                        <a href="/">
                                             <div className="course-content-left">
                                             <i className="feather-file-text" />{" "}
                                             <span className="text">
@@ -1281,7 +1281,7 @@ const LandingPage = () => {
                                     <div className="accordion-body card-body">
                                     <ul className="rbt-course-main-content liststyle">
                                         <li>
-                                        <a href="#">
+                                        <a href="/">
                                             <div className="course-content-left">
                                             <i className="feather-play-circle" />{" "}
                                             <span className="text">Course Intro</span>
@@ -1292,7 +1292,7 @@ const LandingPage = () => {
                                         </a>
                                         </li>
                                         <li>
-                                        <a href="#">
+                                        <a href="/">
                                             <div className="course-content-left">
                                             <i className="feather-file-text" />{" "}
                                             <span className="text">
@@ -1305,7 +1305,7 @@ const LandingPage = () => {
                                         </a>
                                         </li>
                                         <li>
-                                        <a href="#">
+                                        <a href="/">
                                             <div className="course-content-left">
                                             <i className="feather-play-circle" />{" "}
                                             <span className="text">
@@ -1318,7 +1318,7 @@ const LandingPage = () => {
                                         </a>
                                         </li>
                                         <li>
-                                        <a href="#">
+                                        <a href="/">
                                             <div className="course-content-left">
                                             <i className="feather-file-text" />{" "}
                                             <span className="text">
@@ -1331,7 +1331,7 @@ const LandingPage = () => {
                                         </a>
                                         </li>
                                         <li>
-                                        <a href="#">
+                                        <a href="/">
                                             <div className="course-content-left">
                                             <i className="feather-play-circle" />{" "}
                                             <span className="text">
@@ -1344,7 +1344,7 @@ const LandingPage = () => {
                                         </a>
                                         </li>
                                         <li>
-                                        <a href="#">
+                                        <a href="/">
                                             <div className="course-content-left">
                                             <i className="feather-file-text" />{" "}
                                             <span className="text">
@@ -1385,7 +1385,7 @@ const LandingPage = () => {
                                     <div className="accordion-body card-body">
                                     <ul className="rbt-course-main-content liststyle">
                                         <li>
-                                        <a href="#">
+                                        <a href="/">
                                             <div className="course-content-left">
                                             <i className="feather-play-circle" />{" "}
                                             <span className="text">Course Intro</span>
@@ -1396,7 +1396,7 @@ const LandingPage = () => {
                                         </a>
                                         </li>
                                         <li>
-                                        <a href="#">
+                                        <a href="/">
                                             <div className="course-content-left">
                                             <i className="feather-file-text" />{" "}
                                             <span className="text">
@@ -1409,7 +1409,7 @@ const LandingPage = () => {
                                         </a>
                                         </li>
                                         <li>
-                                        <a href="#">
+                                        <a href="/">
                                             <div className="course-content-left">
                                             <i className="feather-play-circle" />{" "}
                                             <span className="text">
@@ -1422,7 +1422,7 @@ const LandingPage = () => {
                                         </a>
                                         </li>
                                         <li>
-                                        <a href="#">
+                                        <a href="/">
                                             <div className="course-content-left">
                                             <i className="feather-file-text" />{" "}
                                             <span className="text">
@@ -1435,7 +1435,7 @@ const LandingPage = () => {
                                         </a>
                                         </li>
                                         <li>
-                                        <a href="#">
+                                        <a href="/">
                                             <div className="course-content-left">
                                             <i className="feather-play-circle" />{" "}
                                             <span className="text">
@@ -1448,7 +1448,7 @@ const LandingPage = () => {
                                         </a>
                                         </li>
                                         <li>
-                                        <a href="#">
+                                        <a href="/">
                                             <div className="course-content-left">
                                             <i className="feather-file-text" />{" "}
                                             <span className="text">
@@ -2237,7 +2237,7 @@ const LandingPage = () => {
                         <div className="media row align-items-center g-5">
                             <div className="col-lg-3 col-xl-3 offset-xl-2">
                             <div className="thumbnail">
-                                <a href="#">
+                                <a href="/">
                                 <img
                                     className="radius-10 w-100"
                                     src="assets/images/team/team-08.jpg"

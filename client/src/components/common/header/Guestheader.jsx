@@ -16,19 +16,19 @@ function Header() {
                         <div className="header-info">
                             <ul className="rbt-information-list">
                             <li>
-                                <a href="#">
+                                <a href="/">
                                 <i className="fab fa-instagram" />
                                 100k <span className="d-none d-xxl-block">Followers</span>
                                 </a>
                             </li>
                             <li>
-                                <a href="#">
+                                <a href="/">
                                 <i className="fab fa-facebook-square" />
                                 500k <span className="d-none d-xxl-block">Followers</span>
                                 </a>
                             </li>
                             <li>
-                                <a href="#">
+                                <a href="/">
                                 <i className="feather-phone" />
                                 +1-202-555-0174
                                 </a>
@@ -44,22 +44,22 @@ function Header() {
                         <div className="header-info d-none d-xl-block">
                             <ul className="social-share-transparent">
                             <li>
-                                <a href="#">
+                                <a href="/">
                                 <i className="fab fa-facebook-f" />
                                 </a>
                             </li>
                             <li>
-                                <a href="#">
+                                <a href="/">
                                 <i className="fab fa-twitter" />
                                 </a>
                             </li>
                             <li>
-                                <a href="#">
+                                <a href="/">
                                 <i className="fab fa-linkedin-in" />
                                 </a>
                             </li>
                             <li>
-                                <a href="#">
+                                <a href="/">
                                 <i className="fab fa-instagram" />
                                 </a>
                             </li>
@@ -154,7 +154,7 @@ function Header() {
            
             </div>
            
-            <a className="rbt-close_side_menu" href="javascript:void(0);" />
+           {/* <a className="rbt-close_side_menu" href="javascript:void(0);">q</a>*/}
             </header>
 
     );

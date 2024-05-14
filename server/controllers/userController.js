@@ -99,9 +99,6 @@ exports.registerUser = async (req, res) => {
 };
 
 exports.loginUser = async (req, res) => {
-
-    console.log("JWT Secret:", process.env.JWT_SECRET);
-
     try {
         const { user_email, user_password } = req.body;
         const user = await User.findOne({
@@ -109,7 +106,6 @@ exports.loginUser = async (req, res) => {
                 [Op.or]: [{ username: user_email }, { user_email: user_email }]
             }
         });
-        
 
         if (user && (await bcrypt.compare(user_password, user.user_password))) {
             const token = jwt.sign(
@@ -117,11 +113,12 @@ exports.loginUser = async (req, res) => {
                 process.env.JWT_SECRET,
                 { expiresIn: '12h' }
             );
-            res.send({ message: 'Login successful', token });
+            const role = "Student";
+            res.send({ message: 'Login successful', token,role});
         } else {
-            res.status(400).send('Invalid credentials');
-        }
+            res.status(400).json({ message: 'Invalid credentials', error: error.message });
+        } 
     } catch (error) {
-        res.status(500).json({ message: 'Error registering user', error: error.message });
+        res.status(500).json({ message: 'Error Login user', error: error.message });
     }
 };

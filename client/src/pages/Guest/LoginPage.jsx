@@ -1,35 +1,33 @@
-import React, { useState } from 'react';
+import React, { useState  } from 'react';
 import MainLayout from '../../layouts/MainLayout';
+import { ApiUrl } from '../../config';
 
 
 
-const LandingPage = () => {
+
+const LoginPage = ({ onLogin }) => {
 
     const [firstName, setFirstName] = useState('');
     const [lastName, setLastName] = useState('');
     const [username, setUsername] = useState('');
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
- 
+    
+
     const loginSubmit = async (event) => {
         event.preventDefault();
-        const response = await fetch('http://localhost:3001/login', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify({ 
-                user_email: email,
-                user_password: password
-            }),
-        });
-        const data = await response.json();
-        console.log(data);  // Process the response data
+ 
+        const logindata =  { 
+            user_email: email,
+            user_password: password
+        };
+        onLogin(logindata);
+        
     };
 
     const registerSubmit = async (event) => {
         event.preventDefault();
-        const response = await fetch('http://localhost:3001/register', {
+        const response = await fetch(ApiUrl+'register', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -71,7 +69,7 @@ const LandingPage = () => {
                             <div className="row mb--30">
                             <div className="col-lg-6">
                                 <div className="rbt-lost-password text-end">
-                                <a className="rbt-btn-link" href="#">
+                                <a className="rbt-btn-link" href="/">
                                     Lost your password?
                                 </a>
                                 </div>
@@ -155,4 +153,4 @@ const LandingPage = () => {
     );
 };
 
-export default LandingPage;
+export default LoginPage;

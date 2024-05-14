@@ -9,6 +9,8 @@ function Footer() {
       <hr className="rbt-separator m-0" />
     </div>
   </div>
+
+
   {/* Start Footer aera */}
   <footer className="rbt-footer footer-style-1 bg-color-white overflow-hidden">
     <div className="footer-top">
@@ -50,7 +52,7 @@ function Footer() {
               <div className="contact-btn mt--30">
                 <a
                   className="rbt-btn hover-icon-reverse btn-border-gradient radius-round"
-                  href="#"
+                  href="/"
                 >
                   <div className="icon-reverse-wrapper">
                     <span className="btn-text">Contact With Us</span>
@@ -126,7 +128,7 @@ function Footer() {
               <h5 className="ft-title">Get Contact</h5>
               <ul className="ft-link">
                 <li>
-                  <span>Phone:</span> <a href="#">(406) 555-0120</a>
+                  <span>Phone:</span> <a href="/">(406) 555-0120</a>
                 </li>
                 <li>
                   <span>E-mail:</span>{" "}
@@ -178,7 +180,7 @@ function Footer() {
           <div className="col-xxl-6 col-xl-6 col-lg-6 col-md-12 col-12">
             <ul className="copyright-link rbt-link-hover justify-content-center justify-content-lg-end mt_sm--10 mt_md--10">
               <li>
-                <a href="#">Terms of service</a>
+                <a href="/">Terms of service</a>
               </li>
               <li>
                 <a href="privacy-policy.html">Privacy policy</a>
@@ -207,13 +209,6 @@ function Footer() {
       <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" />
     </svg>
   </div>
-  {/* JS
-============================================ */}
-  {/* Modernizer JS */}
-  {/* jQuery JS */}
-  {/* Bootstrap JS */}
-  {/* sal.js */}
-  {/* Main JS */}
 </>
 
     );
