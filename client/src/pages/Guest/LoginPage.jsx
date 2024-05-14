@@ -1,7 +1,11 @@
 import React, { useState  } from 'react';
+import { useContext } from 'react';
+import { useNavigate  } from 'react-router-dom';
 import MainLayout from '../../layouts/MainLayout';
+import RegistrationPage from './RegistrationPage.jsx';
 import { ApiUrl } from '../../config';
-
+import { Auth } from "../../utils/AuthContext.jsx"
+import { Toast, ToastContainer } from 'react-bootstrap';
 
 
 
@@ -12,7 +16,12 @@ const LoginPage = ({ onLogin }) => {
     const [username, setUsername] = useState('');
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
-    
+    const [, , , login,] = useContext(Auth)
+    const [showToast, setShowToast] = useState(false); // State for toast visibility
+    const [toastMessage, setToastMessage] = useState(''); // State for toast message
+   
+    const navigate = useNavigate();
+
 
     const loginSubmit = async (event) => {
         event.preventDefault();
@@ -21,27 +30,31 @@ const LoginPage = ({ onLogin }) => {
             user_email: email,
             user_password: password
         };
-        onLogin(logindata);
-        
-    };
 
-    const registerSubmit = async (event) => {
-        event.preventDefault();
-        const response = await fetch(ApiUrl+'register', {
+        const response = await fetch(ApiUrl+'login', {
             method: 'POST',
             headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify({
-                first_name: firstName,
-                last_name: lastName,
-                username,
-                user_email: email,
-                user_password: password,
-            }),
-        });
+              'Content-Type': 'application/json',
+          },
+            body: JSON.stringify(logindata),
+          });
+      
         const data = await response.json();
-        console.log(data);  // Handle the response
+        if (data.message == true) {
+            const userData = data.userData;
+            login(userData.token, userData.username, userData.user_role)
+           
+            if (userData.user_role === "Student") {
+                navigate('/student-dashboard');
+            } else {
+                navigate('/student-profile');
+            }
+        } else {
+            // Handle login failure
+            console.error('Login faileds:', data.message);
+            setToastMessage('Login failed: ' + data.message);
+            setShowToast(true);
+        }
     };
 
 
@@ -94,59 +107,19 @@ const LoginPage = ({ onLogin }) => {
                         </form>
                         </div>
                     </div>
-                    <div className="col-lg-6">
-                        <div className="rbt-contact-form contact-form-style-1 max-width-auto">
-                        <h3 className="title">Register</h3>
-                        <form className="max-width-auto" onSubmit={registerSubmit}>
-                            <div className="form-group">
-                                <input type="text" value={firstName} onChange={(e) => setFirstName(e.target.value)} required />
-                                <label>First Name *</label>
-                                <span className="focus-border" />
-                            </div>
-                            <div className="form-group">
-                                <input type="text" value={lastName} onChange={(e) => setLastName(e.target.value)} required />
-                                <label>Last Name *</label>
-                                <span className="focus-border" />
-                            </div>
-                            <div className="form-group">
-                                <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} required />
-                                <label>Email address *</label>
-                                <span className="focus-border" />
-                            </div>
-                            <div className="form-group">
-                                <input type="text" value={username} onChange={(e) => setUsername(e.target.value)} required />
-                                <label>Username *</label>
-                                <span className="focus-border" />
-                            </div>
-                            <div className="form-group">
-                                <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} required />
-                                <label>Password *</label>
-                                <span className="focus-border" />
-                            </div>
-                           
-                            <div className="form-submit-group">
-                            <button
-                                type="submit"
-                                className="rbt-btn btn-md btn-gradient hover-icon-reverse w-100"
-                            >
-                                <span className="icon-reverse-wrapper">
-                                <span className="btn-text">Register</span>
-                                <span className="btn-icon">
-                                    <i className="feather-arrow-right" />
-                                </span>
-                                <span className="btn-icon">
-                                    <i className="feather-arrow-right" />
-                                </span>
-                                </span>
-                            </button>
-                            </div>
-                        </form>
-                        </div>
-                    </div>
+                    <RegistrationPage/>
                     </div>
                 </div>
-                </div>
-
+            </div>
+            {/* Toast notification for login errors */}
+            <ToastContainer position="top-end" className="p-3">
+                <Toast onClose={() => setShowToast(false)} show={showToast} delay={3000} autohide>
+                    <Toast.Header>
+                        <strong className="me-auto">Login Error</strong>
+                    </Toast.Header>
+                    <Toast.Body>{toastMessage}</Toast.Body>
+                </Toast>
+            </ToastContainer>
 
 
         </MainLayout>

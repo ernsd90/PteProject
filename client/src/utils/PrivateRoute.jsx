@@ -1,16 +1,10 @@
-import React, { useContext } from 'react';
-import { Navigate, Outlet } from 'react-router-dom'; // For navigation
-import { AuthContext } from './AuthContext.jsx'; // Import your AuthContext
+import React from 'react';
+import { Navigate } from 'react-router-dom';
+import { useAuth } from './AuthContext.jsx';
 
-const PrivateRoute = ({ role, children }) => {
-  const { isLoggedIn, token, userRole } = useContext(AuthContext); // Access state from context
-
-  if (!isLoggedIn || userRole !== role) {
-    // Redirect to login if not logged in or role doesn't match
-    return <Navigate to="/login" replace />;
-  }
-
-  return children ? <Outlet /> : children; // Render child component or content
+const PrivateRoute = ({ children }) => {
+    const [authToken] = useAuth();
+    return authToken ? children : <Navigate to="/login" />;
 };
 
-export {PrivateRoute};
+export default PrivateRoute;

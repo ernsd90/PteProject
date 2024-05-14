@@ -1,17 +1,17 @@
 import React from 'react';
 import Head from '../components/common/Head';
-import GuestHeader from '../components/common/header/Guestheader';
+import StudentHeader from '../components/common/header/StudentHeader';
 import GuestFooter from '../components/common/footer/Guestfooter';
 
-const MainLayout = ({ children }) => {
+const StudentLayout = ({ children }) => {
     return (
         <div>
             <Head />
-            <GuestHeader />
+            <StudentHeader />
             <main>{children}</main>
             <GuestFooter />
         </div>
     );
 };
 
-export default MainLayout;
+export default StudentLayout;

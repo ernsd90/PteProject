@@ -1,5 +1,5 @@
 import React from 'react';
-//import '../styles/Footer.css'; // Assuming you have CSS specifically for the footer
+import HeaderLogo from "../header/HeaderLogo";
 
 function Footer() {
     return (
@@ -18,11 +18,7 @@ function Footer() {
         <div className="row g-5">
           <div className="col-lg-4 col-md-6 col-sm-6 col-12">
             <div className="footer-widget">
-              <div className="logo">
-                <a href="index.html">
-                  <img src="assets/images/logo/logo.png" alt="Edu-cause" />
-                </a>
-              </div>
+              <HeaderLogo logohref={"/"}/>
               <p className="description mt--20">
                 We’re always in search for talented and motivated people. Don’t
                 be shy introduce yourself!
@@ -171,8 +167,8 @@ function Footer() {
           <div className="col-xxl-6 col-xl-6 col-lg-6 col-md-12 col-12">
             <p className="rbt-link-hover text-center text-lg-start">
               Copyright © 2023{" "}
-              <a href="https://themeforest.net/user/rbt-themes">
-                Rainbow-Themes.
+              <a href="https://primesoftwares.in">
+                Prime Softwares.
               </a>{" "}
               All Rights Reserved
             </p>
@@ -183,13 +179,10 @@ function Footer() {
                 <a href="/">Terms of service</a>
               </li>
               <li>
-                <a href="privacy-policy.html">Privacy policy</a>
+                <a href="/">Privacy policy</a>
               </li>
               <li>
-                <a href="subscription.html">Subscription</a>
-              </li>
-              <li>
-                <a href="login.html">Login &amp; Register</a>
+                <a href="/login">Login &amp; Register</a>
               </li>
             </ul>
           </div>

@@ -1,10 +1,11 @@
 import React from 'react';
 import StudentLayout from '../../layouts/StudentLayout';
 
-const LandingPage = () => {
+const StudentProfile = () => {
     return (
         <StudentLayout>
-
+            
+            
             <>
               
                 {/* Start Course Feature Box  */}
@@ -138,11 +139,8 @@ const LandingPage = () => {
                 {/* End Newsletter Area  */}
                 </>
 
-
-
-
         </StudentLayout>
     );
 };
 
-export default LandingPage;
+export default StudentProfile;

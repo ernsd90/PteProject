@@ -1,43 +1,26 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import { AuthContext, AuthProvider } from './utils/AuthContext.jsx'; 
-import { PrivateRoute } from './utils/PrivateRoute.jsx'; 
-import LoginPage from './pages/Guest/LoginPage.jsx';
-import LandingPage from './pages/Guest/LandingPage.jsx';
-import StudentDashboard from './pages/Student/StudentDashboard.jsx';// Import your AuthContext
+import { BrowserRouter as Router, Route, Routes,Navigate } from 'react-router-dom';
+import { AuthProvider,useAuth } from './utils/AuthContext.jsx'; 
+//import { PrivateRoute } from './utils/PrivateRoute.jsx'; 
 
+import Guest from './routes/Guest.js'
+import Student from './routes/Student.js'
+import PrivateRoute from './utils/PrivateRoute.jsx';
 
 
 const App = () => {
 return (
-    <AuthProvider>
-      <Router>
-        <AuthContext.Consumer>
-          {(context) => {
-            const { isLoggedIn } = context;
-                return (
-                
-                        <Routes>
-                            <Route path="/" element={<LandingPage />} />
-                            <Route path="/login"  element={<LoginPage onLogin={context.handleLogin} />} />
 
-                            {/* Protected route for Student Dashboard with role check */}
-                            <Route
-                            path="/student-dashboard"
-                            element={
-                                <PrivateRoute role="Student">
-                                <StudentDashboard />
-                                </PrivateRoute>
-                            }
-                            />
-
-                            {/* Add other protected routes with appropriate roles */}
-                    </Routes>
-                );
-            }}
-    </AuthContext.Consumer>
-      </Router>
-    </AuthProvider>
+  <AuthProvider>
+    <Router>
+        <Guest />
+        <Student />
+        {/* Redirect to login if route does not exist */}
+        {/* <Routes>
+          <Route path="/*" element={<Navigate to="/login" />} />
+        </Routes> */}
+    </Router>
+  </AuthProvider>
     );
 };
 

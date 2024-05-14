@@ -82,14 +82,13 @@ exports.registerUser = async (req, res) => {
             message += ' already exists.';
             return res.status(409).json({ message });
         }
-        const hashedPassword = await bcrypt.hash(user_password.trim(), 10);
 
         const user = await User.create({
             first_name,
             last_name,
             username,
             user_email,
-            user_password: hashedPassword
+            user_password
         });
         res.status(201).send({ status: 'User registered', user });
     } catch (error) {
@@ -117,9 +116,7 @@ exports.loginUser = async (req, res) => {
             return res.status(400).json({ message: 'Email Or UserName Incorrect' });
         }
 
-        const isPasswordValid = await bcrypt.compare(user_password, user.user_password);
-
-      
+        const isPasswordValid = await bcrypt.compare(user_password.trim(), user.user_password);
         if (!isPasswordValid) {
             return res.status(400).json({ message: 'Invalid Password' });
         }
@@ -130,8 +127,16 @@ exports.loginUser = async (req, res) => {
             { expiresIn: '12h' }
         );
 
-        const role = "Student";
-        res.send({ message: 'Login successful', token, role });
+        const userData = {
+            username:user.username,
+            first_name:user.first_name,
+            last_name:user.last_name,
+            user_email:user.user_email,
+            user_role:'Student',
+            token:token,
+        }
+        const role = "";
+        res.send({ message: true, userData });
 
 
     } catch (error) {
