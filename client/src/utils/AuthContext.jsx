@@ -16,7 +16,7 @@ const AuthProvider = ({ children }) => {
   const [token, setToken] = useState(null);
   const [UserRole, setUserRole] = useState(null);
 
-  const navigate = useNavigate();
+  //const navigate = useNavigate();
 
   useEffect(() => {
     // Check local storage or session storage for a stored token on application load
@@ -47,9 +47,9 @@ const AuthProvider = ({ children }) => {
       setUserRole(role);
       localStorage.setItem('authToken', data.token); // Store token securely
       if (role === "Student") {
-        navigate('/student-dashboard');
+       // navigate('/student-dashboard');
       } else {
-        navigate('/');
+       // navigate('/');
       }
     } else {
       // Handle login failure

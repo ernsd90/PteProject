@@ -99,25 +99,41 @@ exports.registerUser = async (req, res) => {
 };
 
 exports.loginUser = async (req, res) => {
+
     try {
         const { user_email, user_password } = req.body;
+        if (!user_email || !user_password) {
+            return res.status(400).json({ message: 'Email and password are required' });
+        }
         const user = await User.findOne({
             where: {
-                [Op.or]: [{ username: user_email }, { user_email: user_email }]
+                [Op.or]: [
+                    { username: user_email }, 
+                    { user_email: user_email }
+                ]
             }
         });
+        if (!user) {
+            return res.status(400).json({ message: 'Email Or UserName Incorrect' });
+        }
 
-        if (user && (await bcrypt.compare(user_password, user.user_password))) {
-            const token = jwt.sign(
-                { id: user.id, user_email: user.user_email },
-                process.env.JWT_SECRET,
-                { expiresIn: '12h' }
-            );
-            const role = "Student";
-            res.send({ message: 'Login successful', token,role});
-        } else {
-            res.status(400).json({ message: 'Invalid credentials', error: error.message });
-        } 
+        const isPasswordValid = await bcrypt.compare(user_password, user.user_password);
+
+      
+        if (!isPasswordValid) {
+            return res.status(400).json({ message: 'Invalid Password' });
+        }
+
+        const token = jwt.sign(
+            { id: user.id, user_email: user.user_email },
+            process.env.JWT_SECRET,
+            { expiresIn: '12h' }
+        );
+
+        const role = "Student";
+        res.send({ message: 'Login successful', token, role });
+
+
     } catch (error) {
         res.status(500).json({ message: 'Error Login user', error: error.message });
     }
