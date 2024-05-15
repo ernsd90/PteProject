@@ -1,28 +1,8 @@
 import React, { useEffect } from 'react';
 import StudentLayout from '../../layouts/StudentLayout';
-import { loadScript, waitForElement } from '../../utils/loadScript';
 import { useAuth } from '../../utils/AuthContext';
 
 const LandingPage = () => {
-
-    useEffect(() => {
-        // Load script1.js only after #myElement is available
-        waitForElement('.header-caption', () => {
-            loadScript('assets/js/vendor/text-type.js', () => {
-                console.log('text-type loaded and initialized');
-            });
-        });
-        waitForElement('.odometer', () => {
-            loadScript('assets/js/vendor/odometer.js', () => {
-                console.log('odometer loaded and initialized');
-            });
-        });
-        waitForElement('.rbt-footer', () => {
-            loadScript('assets/js/vendor/countdown.js', () => {
-                console.log('odometer loaded and initialized');
-            });
-        });
-    }, []);
 
     const [,, userName, firstName, lastName,,] = useAuth();
     return (

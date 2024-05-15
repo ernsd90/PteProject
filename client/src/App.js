@@ -1,22 +1,25 @@
 import React, { useEffect } from 'react';
 import { BrowserRouter as Router, Route, Routes,Navigate } from 'react-router-dom';
 import { AuthProvider } from './utils/AuthContext.jsx'; 
-import { loadScript, waitForElement } from './utils/loadScript.js';
+import { loadAllScripts } from './utils/loadScript.js';
 
 import Guest from './routes/Guest.js'
 import Student from './routes/Student.js'
 
+let scriptsLoaded = true;
 
 const App = () => {
 
+    useEffect(() => {
+      if(scriptsLoaded === true ){
+        loadAllScripts();
+        scriptsLoaded = false;
+      }
+      
 
-  useEffect(() => {
-    waitForElement('.rbt-footer', () => {
-        loadScript('assets/js/main.js', () => {
-            console.log('main.js loaded and initialized');
-        });
-    });
-}, []); 
+
+    }, []);
+
 
 
 return (
@@ -25,11 +28,8 @@ return (
     <Router>
         <Guest />
         <Student />
-        {/* Redirect to login if route does not exist */}
-        {/* <Routes>
-          <Route path="/*" element={<Navigate to="/login" />} />
-        </Routes> */}
     </Router>
+    <div className="scriptjsinclude"></div>
   </AuthProvider>
     );
 };

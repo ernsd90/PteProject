@@ -1,4 +1,30 @@
 {
+	"Speaking": [
+		{
+			"title": "Read Aloud",
+			"link": "speaking/read_aloud",
+			"activate": 1
+		},
+		{
+			"title": "Repeat Sentence",
+			"link": "speaking/repeat_sentences",
+			"activate": 1
+		},
+		{
+			"title": "Describe Image",
+			"link": "speaking/describe_image",
+			"activate": 1
+		},
+		{
+			"title": "Re-tell Lecture",
+			"link": "speaking/retell_lectures",
+			"activate": 1
+		},
+		{
+			"title": "Answer Short Question",
+			"link": "speaking/answer_questions",
+			"activate": 1
+		}],
 	"Reading": [
 	{
 		"title": "Reading & Writing\uff1aFill in the blanks",
@@ -66,32 +92,7 @@
 		"link": "listening/l_wfd",
 		"activate": 1
 	}],
-	"Speaking": [
-	{
-		"title": "Read Aloud",
-		"link": "speaking/read_aloud",
-		"activate": 1
-	},
-	{
-		"title": "Repeat Sentence",
-		"link": "speaking/repeat_sentences",
-		"activate": 1
-	},
-	{
-		"title": "Describe Image",
-		"link": "speaking/describe_image",
-		"activate": 1
-	},
-	{
-		"title": "Re-tell Lecture",
-		"link": "speaking/retell_lectures",
-		"activate": 1
-	},
-	{
-		"title": "Answer Short Question",
-		"link": "speaking/answer_questions",
-		"activate": 1
-	}],
+	
 	"Writing": [
 	{
 		"title": "Summarize Written Text",

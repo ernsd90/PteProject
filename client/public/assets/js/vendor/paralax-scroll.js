@@ -1,7 +1,4 @@
-$(function() {
-    //    console.log('initiated');
-        ParallaxScroll.init();
-    });
+ 
     
     var ParallaxScroll = {
         /* PUBLIC VARIABLES */
@@ -184,3 +181,11 @@ $(function() {
             }
         }
     };
+
+    $(document).ready(function() {
+        if (window.ParallaxScroll) {
+            window.ParallaxScroll.init();
+        } else {
+            console.error('ParalaxScroll is not defined.');
+        }
+    });

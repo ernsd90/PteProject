@@ -1110,19 +1110,14 @@
 
         lessonToggle: function () {
             $('.lesson-toggle-active').on('click', function () {
-                $(this).toggleClass('sidebar-hide')
+                $(this).toggleClass('sidebar-hide');
                 $('.rbt-lesson-leftsidebar').toggleClass('sibebar-none');
-            })
+            });
         }
-
-
-
-
-
-
-
     }
-    eduJs.i();
+    $(document).ready(function() {
+        eduJs.i();
+    });
 
 
 })(window, document, jQuery);
