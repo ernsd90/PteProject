@@ -36,7 +36,7 @@ jQuery(document).ready(function ($) {
             word.html(newLetters).css('opacity', 1);
         });
     }
-
+ 
     function animateHeadline($headlines) {
         var duration = animationDelay;
         $headlines.each(function () {

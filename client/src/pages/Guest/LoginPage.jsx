@@ -5,20 +5,14 @@ import MainLayout from '../../layouts/MainLayout';
 import RegistrationPage from './RegistrationPage.jsx';
 import { ApiUrl } from '../../config';
 import { Auth } from "../../utils/AuthContext.jsx"
-import { Toast, ToastContainer } from 'react-bootstrap';
+import { toast, ToastContainer } from 'react-toastify';
 
+const LoginPage = () => {
 
-
-const LoginPage = ({ onLogin }) => {
-
-    const [firstName, setFirstName] = useState('');
-    const [lastName, setLastName] = useState('');
-    const [username, setUsername] = useState('');
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
-    const [, , , login,] = useContext(Auth)
-    const [showToast, setShowToast] = useState(false); // State for toast visibility
-    const [toastMessage, setToastMessage] = useState(''); // State for toast message
+    const [login] = useContext(Auth)
+
    
     const navigate = useNavigate();
 
@@ -40,10 +34,20 @@ const LoginPage = ({ onLogin }) => {
           });
       
         const data = await response.json();
-        if (data.message == true) {
+        if (data.message === true) {
             const userData = data.userData;
-            login(userData.token, userData.username, userData.user_role)
-           
+            login(userData.token, userData.username,userData.first_name,userData.last_name, userData.user_role);
+
+            toast.success('Login Successfully', {
+                position: "top-right",
+                autoClose: 3000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+            });
+            
             if (userData.user_role === "Student") {
                 navigate('/student-dashboard');
             } else {
@@ -52,8 +56,16 @@ const LoginPage = ({ onLogin }) => {
         } else {
             // Handle login failure
             console.error('Login faileds:', data.message);
-            setToastMessage('Login failed: ' + data.message);
-            setShowToast(true);
+            // Handle login failure
+            toast.error('Login failed: ' + data.message, {
+                position: "top-right",
+                autoClose: 3000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+            });
         }
     };
 
@@ -61,9 +73,10 @@ const LoginPage = ({ onLogin }) => {
 
     return (
         <MainLayout>
-            
+            <ToastContainer />
             <div className="rbt-elements-area bg-color-white rbt-section-gap">
                 <div className="container">
+                   
                     <div className="row gy-5 row--30">
                     <div className="col-lg-6">
                         <div className="rbt-contact-form contact-form-style-1 max-width-auto">
@@ -111,15 +124,7 @@ const LoginPage = ({ onLogin }) => {
                     </div>
                 </div>
             </div>
-            {/* Toast notification for login errors */}
-            <ToastContainer position="top-end" className="p-3">
-                <Toast onClose={() => setShowToast(false)} show={showToast} delay={3000} autohide>
-                    <Toast.Header>
-                        <strong className="me-auto">Login Error</strong>
-                    </Toast.Header>
-                    <Toast.Body>{toastMessage}</Toast.Body>
-                </Toast>
-            </ToastContainer>
+            
 
 
         </MainLayout>

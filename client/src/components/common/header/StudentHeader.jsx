@@ -2,7 +2,7 @@ import React from 'react';
 import StudentTOpBar from "../topbar/StudentTopBar";
 import HeaderLogo from "./HeaderLogo";
 import RightNav from "./RightNav";
-import moduledata from "../../../appData/allmodule.json"
+import moduledata from "../../../appData/allmodule.json";
 
 function Header() {
     const logohref = '/student-dashboard';
@@ -17,7 +17,6 @@ function Header() {
                 <div className="mainbar-row rbt-navigation-center align-items-center">
                     
                     <HeaderLogo logohref={logohref}/>
-
                     <div className="rbt-main-navigation d-none d-xl-block">
                     <nav className="mainmenu-nav">
                         <ul className="mainmenu">
@@ -39,7 +38,7 @@ function Header() {
                                         <ul className="mega-menu-item">
                                             {moduledata[category].map((item, index) => ( item.activate === 1 && (
                                                 <li key={index}>
-                                                    <a href={item.link}>{item.title}</a>
+                                                    <a href={`/student/${item.link}`}>{item.title}</a>
                                                 </li>
                                             )
                                             ))}

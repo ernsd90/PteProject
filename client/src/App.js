@@ -1,14 +1,24 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { BrowserRouter as Router, Route, Routes,Navigate } from 'react-router-dom';
-import { AuthProvider,useAuth } from './utils/AuthContext.jsx'; 
-//import { PrivateRoute } from './utils/PrivateRoute.jsx'; 
+import { AuthProvider } from './utils/AuthContext.jsx'; 
+import { loadScript, waitForElement } from './utils/loadScript.js';
 
 import Guest from './routes/Guest.js'
 import Student from './routes/Student.js'
-import PrivateRoute from './utils/PrivateRoute.jsx';
 
 
 const App = () => {
+
+
+  useEffect(() => {
+    waitForElement('.rbt-footer', () => {
+        loadScript('assets/js/main.js', () => {
+            console.log('main.js loaded and initialized');
+        });
+    });
+}, []); 
+
+
 return (
 
   <AuthProvider>

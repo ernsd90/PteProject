@@ -1,141 +1,157 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import StudentLayout from '../../layouts/StudentLayout';
+import { loadScript, waitForElement } from '../../utils/loadScript';
+import { useAuth } from '../../utils/AuthContext';
 
 const LandingPage = () => {
+
+    useEffect(() => {
+        // Load script1.js only after #myElement is available
+        waitForElement('.header-caption', () => {
+            loadScript('assets/js/vendor/text-type.js', () => {
+                console.log('text-type loaded and initialized');
+            });
+        });
+        waitForElement('.odometer', () => {
+            loadScript('assets/js/vendor/odometer.js', () => {
+                console.log('odometer loaded and initialized');
+            });
+        });
+        waitForElement('.rbt-footer', () => {
+            loadScript('assets/js/vendor/countdown.js', () => {
+                console.log('odometer loaded and initialized');
+            });
+        });
+    }, []);
+
+    const [,, userName, firstName, lastName,,] = useAuth();
     return (
         <StudentLayout>
 
             <>
-              
-                {/* Start Course Feature Box  */}
-                <div className="rbt-feature-area rbt-single-course-features rbt-section-gapBottom rbt-feature-box">
+                <div className="rbt-conatct-area bg-gradient-11 rbt-section-gap mb--20">
                     <div className="container">
-                    <div className="row">
-                        <div className="col-lg-10 offset-lg-1">
-                        <div className="row row--30 gy-5 align-items-center">
-                            <div className="col-lg-6 col-xl-5">
-                            <div className="thumbnail rbt-shadow-box">
+                        <div className="row">
+                            <div className="col-lg-12">
+                                <div className="section-title text-center mb--20">
+                                <h3 className="title">
+                                    Welcome&nbsp;
+                                    <span className="header-caption">
+                                        <span className="cd-headline zoom">
+                                        <span className="cd-words-wrapper">
+                                            <b className="is-visible theme-gradient">{firstName} {lastName}.</b>
+                                            <b className="is-hidden theme-gradient">{userName}.</b>
+                                        </span>
+                                        </span>
+                                    </span>
+                                    </h3>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        {/* Start Counter  */}
+                        <div className="row g-5 hanger-line">
+
+                             {/* Start Single Counter  */}
+                        <div className="col-lg-3 col-md-6 col-sm-6 col-12 mt--60 mt_md--30 mt_sm--30 mt_mobile--60">
+                            <div className="rbt-counterup rbt-hover-03 border-bottom-gradient">
+                            <div className="top-circle-shape" />
+                            <div className="inner">
+                                <div className="rbt-round-icon">
                                 <img
-                                className="w-100 radius-10"
-                                src="assets/images/course/course-single-01.jpg"
-                                alt="Card"
+                                    src="assets/images/icons/counter-02.png"
+                                    alt="Icons Images"
                                 />
-                            </div>
-                            </div>
-                            <div className="col-lg-6 col-xl-7">
-                            <div className="section-title">
-                                <h2 className="title">What you'll learn</h2>
-                                <p className="b1 mt--15">
-                                Far far away, behind the word mountains, far from the
-                                countries Vokalia and Consonantia.
-                                </p>
-                            </div>
-                            <div className="section-title subtitle">
-                                <h5 className="title">Whats Material Includes?</h5>
-                            </div>
-                            <div className="row g-5">
-                                {/* Start Feture Box  */}
-                                <div className="col-lg-6">
-                                <ul className="rbt-list-style-1">
-                                    <li>
-                                    <i className="feather-check" />
-                                    Become an advanced, confident.
-                                    </li>
-                                    <li>
-                                    <i className="feather-check" />
-                                    Have an intermediate skill.
-                                    </li>
-                                    <li>
-                                    <i className="feather-check" />
-                                    Have a portfolio of various.
-                                    </li>
-                                    <li>
-                                    <i className="feather-check" />
-                                    Have a portfolio of various.
-                                    </li>
-                                    <li>
-                                    <i className="feather-check" />
-                                    Use the numpy library to create.
-                                    </li>
-                                </ul>
                                 </div>
-                                {/* End Feture Box  */}
-                                {/* Start Feture Box  */}
-                                <div className="col-lg-6">
-                                <ul className="rbt-list-style-1">
-                                    <li>
-                                    <i className="feather-check" />
-                                    Use the Jupyter Notebook.
-                                    </li>
-                                    <li>
-                                    <i className="feather-check" />
-                                    Use the pandas module with.
-                                    </li>
-                                    <li>
-                                    <i className="feather-check" />
-                                    Have a portfolio of various.
-                                    </li>
-                                    <li>
-                                    <i className="feather-check" />
-                                    Have a portfolio of various.
-                                    </li>
-                                    <li>
-                                    <i className="feather-check" />
-                                    Create data visualizations.
-                                    </li>
-                                </ul>
+                                <div className="content">
+                                <h3 className="counter">
+                                    <span className="odometer" data-count={800}>
+                                    00
+                                    </span>
+                                </h3>
+                                <span className="subtitle">Reading</span>
                                 </div>
-                                {/* End Feture Box  */}
-                            </div>
-                            <div className="read-more-btn mt--40">
-                                <a className="rbt-moderbt-btn" href="/">
-                                <span className="moderbt-btn-text">Learn More About Us</span>
-                                <i className="feather-arrow-right" />
-                                </a>
                             </div>
                             </div>
                         </div>
+                        {/* End Single Counter  */}
+                        {/* Start Single Counter  */}
+                        <div className="col-lg-3 col-md-6 col-sm-6 col-12">
+                            <div className="rbt-counterup rbt-hover-03 border-bottom-gradient">
+                            <div className="top-circle-shape" />
+                            <div className="inner">
+                                <div className="rbt-round-icon">
+                                <img
+                                    src="assets/images/icons/counter-01.png"
+                                    alt="Icons Images"
+                                />
+                                </div>
+                                <div className="content">
+                                <h3 className="counter">
+                                    <span className="odometer" data-count={500}>
+                                    00
+                                    </span>
+                                </h3>
+                                <span className="subtitle">Speaking</span>
+                                </div>
+                            </div>
+                            </div>
                         </div>
-                    </div>
+                        {/* End Single Counter  */}
+
+                        {/* Start Single Counter  */}
+                        <div className="col-lg-3 col-md-6 col-sm-6 col-12 mt_md--60 mt_sm--60">
+                            <div className="rbt-counterup rbt-hover-03 border-bottom-gradient">
+                            <div className="top-circle-shape" />
+                            <div className="inner">
+                                <div className="rbt-round-icon">
+                                <img
+                                    src="assets/images/icons/counter-03.png"
+                                    alt="Icons Images"
+                                />
+                                </div>
+                                <div className="content">
+                                <h3 className="counter">
+                                    <span className="odometer" data-count={1000}>
+                                    00
+                                    </span>
+                                </h3>
+                                <span className="subtitle">Listening</span>
+                                </div>
+                            </div>
+                            </div>
+                        </div>
+                        {/* End Single Counter  */}
+                        {/* Start Single Counter  */}
+                        <div className="col-lg-3 col-md-6 col-sm-6 col-12 mt--60 mt_md--30 mt_sm--30 mt_mobile--60">
+                            <div className="rbt-counterup rbt-hover-03 border-bottom-gradient">
+                            <div className="top-circle-shape" />
+                            <div className="inner">
+                                <div className="rbt-round-icon">
+                                <img
+                                    src="assets/images/icons/counter-04.png"
+                                    alt="Icons Images"
+                                />
+                                </div>
+                                <div className="content">
+                                <h3 className="counter">
+                                    <span className="odometer" data-count={100}>
+                                    00
+                                    </span>
+                                </h3>
+                                <span className="subtitle">Writing</span>
+                                </div>
+                            </div>
+                            </div>
+                        </div>
+                        {/* End Single Counter  */}
+
+                       
+                        
+                        </div>
+                        {/* End Counter  */}
                     </div>
                 </div>
-                {/* End Course Feature Box  */}
-                {/* Start Newsletter Area  */}
-                <div className="rbt-newsletter-area bg-color-white rbt-section-gap">
-                    <div className="container">
-                    <div className="row">
-                        <div className="col-lg-12">
-                        <div className="section-title text-center">
-                            <h2 className="title">
-                            Want to get special offers <br /> and Course updates?
-                            </h2>
-                            <form action="#" className="newsletter-form-1 mt--50 radius-round">
-                            <input
-                                className="rbt-border"
-                                type="email"
-                                placeholder="Enter Your E-Email"
-                            />
-                            <button
-                                type="submit"
-                                className="rbt-btn btn-md btn-gradient hover-icon-reverse radius-round"
-                            >
-                                <span className="icon-reverse-wrapper">
-                                <span className="btn-text">Subscribe</span>
-                                <span className="btn-icon">
-                                    <i className="feather-arrow-right" />
-                                </span>
-                                <span className="btn-icon">
-                                    <i className="feather-arrow-right" />
-                                </span>
-                                </span>
-                            </button>
-                            </form>
-                        </div>
-                        </div>
-                    </div>
-                    </div>
-                </div>
-                {/* End Newsletter Area  */}
                 </>
 
 

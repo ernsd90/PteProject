@@ -18,7 +18,7 @@ const StudentProfile = () => {
                             <div className="thumbnail rbt-shadow-box">
                                 <img
                                 className="w-100 radius-10"
-                                src="assets/images/course/course-single-01.jpg"
+                                src="/assets/images/course/course-single-01.jpg"
                                 alt="Card"
                                 />
                             </div>

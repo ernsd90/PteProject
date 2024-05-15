@@ -2,105 +2,105 @@
 	"Reading": [
 	{
 		"title": "Reading & Writing\uff1aFill in the blanks",
-		"link": "reading/fib_wr.php",
+		"link": "reading/fib_wr",
 		"activate": 1
 	},
 	{
 		"title": "Reading\uff1aFill in the Blanks",
-		"link": "reading/fib_rd.php",
+		"link": "reading/fib_rd",
 		"activate": 1
 	},
 	{
 		"title": "Multiple Choice (Single)",
-		"link": "reading/fib_mcs.php",
+		"link": "reading/fib_mcs",
 		"activate": 1
 	},
 	{
 		"title": "Multiple Choice (Multiple)",
-		"link": "reading/r_mcm.php",
+		"link": "reading/r_mcm",
 		"activate": 1
 	},
 	{
 		"title": "Re-order Paragraphs",
-		"link": "reading/fib_ro.php",
+		"link": "reading/fib_ro",
 		"activate": 1
 	}],
 	"Listening": [
 	{
 		"title": "Highlight Correct Summary",
-		"link": "listening/l_hcs.php",
+		"link": "listening/l_hcs",
 		"activate": 1
 	},
 	{
 		"title": "Select Missing Word",
-		"link": "listening/l_smw.php",
+		"link": "listening/l_smw",
 		"activate": 1
 	},
 	{
 		"title": "Multiple Choice (Single)",
-		"link": "listening/l_mcs.php",
+		"link": "listening/l_mcs",
 		"activate": 1
 	},
 	{
 		"title": "Multiple Choice (Multiple)",
-		"link": "listening/l_mcm.php",
+		"link": "listening/l_mcm",
 		"activate": 1
 	},
 	{
 		"title": "Summarize Spoken Text",
-		"link": "listening/l_sst.php",
+		"link": "listening/l_sst",
 		"activate": 1
 	},
 	{
 		"title": "Highlight Incorrect Words",
-		"link": "listening/l_hiw.php",
+		"link": "listening/l_hiw",
 		"activate": 1
 	},
 	{
 		"title": "Fill in the Blanks",
-		"link": "listening/l_fib.php",
+		"link": "listening/l_fib",
 		"activate": 1
 	},
 	{
 		"title": "Write From Dictation",
-		"link": "listening/l_wfd.php",
+		"link": "listening/l_wfd",
 		"activate": 1
 	}],
 	"Speaking": [
 	{
 		"title": "Read Aloud",
-		"link": "speaking/read_aloud.php",
+		"link": "speaking/read_aloud",
 		"activate": 1
 	},
 	{
 		"title": "Repeat Sentence",
-		"link": "speaking/repeat_sentences.php",
+		"link": "speaking/repeat_sentences",
 		"activate": 1
 	},
 	{
 		"title": "Describe Image",
-		"link": "speaking/describe_image.php",
+		"link": "speaking/describe_image",
 		"activate": 1
 	},
 	{
 		"title": "Re-tell Lecture",
-		"link": "speaking/retell_lectures.php",
+		"link": "speaking/retell_lectures",
 		"activate": 1
 	},
 	{
 		"title": "Answer Short Question",
-		"link": "speaking/answer_questions.php",
+		"link": "speaking/answer_questions",
 		"activate": 1
 	}],
 	"Writing": [
 	{
 		"title": "Summarize Written Text",
-		"link": "writing/summarize_written.php",
+		"link": "writing/summarize_written",
 		"activate": 1
 	},
 	{
 		"title": "Write Essay",
-		"link": "writing/write_essay.php",
+		"link": "writing/write_essay",
 		"activate": 1
 	}]
 }

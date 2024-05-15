@@ -10,6 +10,7 @@ const MainLayout = ({ children }) => {
             <GuestHeader />
             <main>{children}</main>
             <GuestFooter />
+            
         </div>
     );
 };
