@@ -18,8 +18,8 @@ export function loadScript(src, onLoad) {
     };
     script.onerror = () => console.error(`Failed to load script ${src}`);
     document.body.appendChild(script);
-    console.log(script.src);
-    console.log("1");
+   // console.log(script.src);
+    //console.log("1");
 }
 
 export function waitForElement(selectors, callback) {
@@ -27,7 +27,7 @@ export function waitForElement(selectors, callback) {
     if (elements.some(element => element)) {
         callback(); 
     } else {
-        console.log("Call Back JSSSSSS")
+       // console.log("Call Back JSSSSSS")
         setTimeout(() => waitForElement(selectors, callback), 10000);
     }
 }
