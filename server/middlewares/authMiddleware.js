@@ -1,7 +1,6 @@
-// server/middlewares/authMiddleware.js
 const jwt = require('jsonwebtoken');
-
-const protect = (req, res, next) => {
+ 
+const authenticateToken  = (req, res, next) => {
     let token;
     if (req.headers.authorization && req.headers.authorization.startsWith('Bearer')) {
         try {
@@ -14,7 +13,7 @@ const protect = (req, res, next) => {
         }
     } else {
         res.status(401).send('No token provided');
-    }
+    } 
 };
 
-module.exports = { protect };
+module.exports =  authenticateToken;

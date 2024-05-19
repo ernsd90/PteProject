@@ -66,13 +66,8 @@ exports.registerUser = async (req, res) => {
 
     try {
 
-        const existingUser = await User.findOne({
-            where: {
-                [Op.or]: [{ username: username }, { user_email: user_email }]
-            }
-        });
-
-        if (existingUser) {
+    const existingUser = await User.findByEmailOrUsername(user_email, username);
+    if (existingUser) {
             const isEmailConflict = existingUser.user_email === user_email;
             const isUsernameConflict = existingUser.username === username;
             let message = 'An account with the same ';
@@ -97,49 +92,35 @@ exports.registerUser = async (req, res) => {
     }
 };
 
+
 exports.loginUser = async (req, res) => {
-
+    const { user_email, user_password } = req.body;
+  
     try {
-        const { user_email, user_password } = req.body;
-        if (!user_email || !user_password) {
-            return res.status(400).json({ message: 'Email and password are required' });
-        }
-        const user = await User.findOne({
-            where: {
-                [Op.or]: [
-                    { username: user_email }, 
-                    { user_email: user_email }
-                ]
-            }
-        });
-        if (!user) {
-            return res.status(400).json({ message: 'Email Or UserName Incorrect' });
-        }
-
-        const isPasswordValid = await bcrypt.compare(user_password.trim(), user.user_password);
-        if (!isPasswordValid) {
-            return res.status(400).json({ message: 'Invalid Password' });
-        }
-
-        const token = jwt.sign(
-            { id: user.id, user_email: user.user_email },
-            process.env.JWT_SECRET,
-            { expiresIn: '12h' }
-        );
-
-        const userData = {
-            username:user.username,
-            first_name:user.first_name,
-            last_name:user.last_name,
-            user_email:user.user_email,
-            user_role:'Student',
-            token:token,
-        }
+      const user = await User.findByEmailOrUsername(user_email, user_email);
+      if (!user) {
+        return res.status(400).json({ message: 'Invalid UserName or Email credentials' });
+      }
+  
+      const isPasswordValid = await bcrypt.compare(user_password, user.user_password);
+      if (!isPasswordValid) {
+        return res.status(400).json({ message: 'Invalid Password credentials' });
+      }
+  
+      const token = jwt.sign({ id: user.id, email: user.user_email }, process.env.JWT_SECRET, { expiresIn: '12h' });
+      
+      const userData = {
+        username:user.username,
+        first_name:user.first_name,
+        last_name:user.last_name,
+        user_email:user.user_email,
+        user_role:'Student',
+        token:token,
+    }
         const role = "";
         res.send({ message: true, userData });
-
-
     } catch (error) {
-        res.status(500).json({ message: 'Error Login user', error: error.message });
+      console.error(error);
+      res.status(500).json({ message: 'Error logging in user', error: error.message });
     }
-};
+  };
