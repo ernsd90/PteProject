@@ -20,6 +20,7 @@ const Dictaphone = () => {
     <div>
       {showFirstWidget && <DictaphoneWidgetA />}
       <DictaphoneWidgetB />
+      
       <button onClick={listenOnce}>Listen once</button>
       <button onClick={listenContinuously}>Listen continuously</button>
       <button onClick={listenContinuouslyInChinese}>Listen continuously (Chinese)</button>

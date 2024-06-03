@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import Pagination from './Pagination';
 
-const LeftSidebar = ({ title,baseUrl,data, currentPage, totalPages, onPageChange }) => {
+const LeftSidebar = ({ title,baseUrl,data, currentPage, totalPages, onPageChange,onEntryClick }) => {
 
     console.log("LeftSidebar",data);
     // Get the current URL
@@ -36,7 +36,7 @@ const LeftSidebar = ({ title,baseUrl,data, currentPage, totalPages, onPageChange
                             
                             {data.map((entry) => (
                             <li key={entry.id}> 
-                                <a href={`${baseUrl}/${entry.id}`}>
+                                <a href={`${baseUrl}/${entry.id}`} onClick={onEntryClick(entry)}>
                                 <div className="course-content-left">
                                     <i className="feather-file-text" />
                                     <span className="text">{entry.title}</span>
